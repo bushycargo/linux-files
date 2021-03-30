@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo Entering hybrid-sleep.
+echo Screen may flicker.
+systemctl hybrid-sleep

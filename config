@@ -35,8 +35,11 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
+set $dmenu-colour #87ceeb
+set $old-dmenu-colour #b3e774
 # start dmenu (a program launcher)
-bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 450 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 18"
+bindsym $mod+d exec "rofi -modi window,drun,run -show drun -sidebar-mode -terminal i3-sensible-terminal -color-window '#000000,#000000,#000000' -color-normal '#000000,$dmenu-colour,#000000,$dmenu-colour,#000000' -color-active '#000000,$dmenu-colour,#000000,$dmenu-colour,#000000' -color-urgent '#000000,$dmenu-colour,#000000,$dmenu-colour,#000000'"
+#bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -width 100 -padding 450 -opacity "90" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 18"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -94,8 +97,8 @@ bindsym $mod+a focus parent
 
 set $workspace1 "1: Main"
 set $workspace2 "2: Terminals"
-set $workspace3 "3: Social"
-set $workspace4 "4: Firefox"
+set $workspace3 "3"
+set $workspace4 "4"
 set $workspace10 "10: Music"
 
 # switch to workspace
@@ -184,7 +187,7 @@ bar {
 	}
 }
 
-assign [class="Gnome-terminal"] $workspace2
+assign [class="xterm-256color "] $workspace2
 assign [class="discord"] $workspace3
 assign [class="Firefox"] $workspace4
 assign [class="Gedit"] $workspace1
@@ -192,9 +195,7 @@ assign [class="Spotify"] $workspace10
 assign [class="spotify"] $workspace10
 assign [class="Code"] $workspace1
 
-exec_always --no-startup-id feh --bg-scale /home/bushycargo/Pictures/wallpaper.jpg
-bindsym $mod+x exec i3lock -i /home/bushycargo/Pictures/wallpaper.png -e
-exec --no-startup-id discord
-exec --no-startup-id compton -f
-exec --no-startup-id spotify
+exec_always --no-startup-id feh --bg-scale /home/bushycargo/.config/i3/background.jpg
+bindsym $mod+x exec i3lock -i /home/bushycargo/.config/i3/background.png -e
+exec --no-startup-id compton -f -i 1.0
 
