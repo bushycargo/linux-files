@@ -3,3 +3,4 @@
 echo Entering hybrid-sleep.
 echo Screen may flicker.
 systemctl hybrid-sleep
+betterlockscreen -l

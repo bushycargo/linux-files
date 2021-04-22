@@ -9,7 +9,7 @@ while getopts ":b:s" opt; do
 			echo "Appended .bashrc" >&2
 		;;
 		s)
-			cp -r scripts/* ~/
+			cp -r scripts/* ~/scripts/
 			echo "Updated Scripts. Install Finished" >&2
 			exit 0
 		;;
