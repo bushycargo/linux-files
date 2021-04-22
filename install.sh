@@ -20,15 +20,17 @@ while getopts ":b:s" opt; do
 	esac
 done
 
-sudo pacman -S feh compton rofi i3-wm i3lock i3status
+sudo pacman -S feh compton rofi i3-wm i3status trizen
+trizen -S betterlockscreen
 
 mkdir ~/.config/i3 || true
 mkdir ~/scripts || true
 
 cp -i config ~/.config/i3/
 cp background.jgp ~/.config/i3/
-cp background.png ~/.config.i3/
+cp background.png ~/.config/i3/
 cp -r scripts/* ~/
+betterlockscreen -u ~/.config/i3/background.jgp
 
 chmod +x ~/scripts/*
 

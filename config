@@ -196,6 +196,6 @@ assign [class="spotify"] $workspace10
 assign [class="Code"] $workspace1
 
 exec_always --no-startup-id feh --bg-scale /home/bushycargo/.config/i3/background.jpg
-bindsym $mod+x exec i3lock -i /home/bushycargo/.config/i3/background.png -e
+bindsym $mod+x exec betterlockscreen -l 
 exec --no-startup-id compton -f -i 1.0
 
