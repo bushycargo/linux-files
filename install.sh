@@ -2,7 +2,7 @@
 
 echo Starting Install
 
-while getopts ":b:s" opt; do
+while getopts ":b:s:c" opt; do
 	case $opt in
 		b)
 			cat bashrcAppend >> ~/.bashrc
@@ -11,6 +11,11 @@ while getopts ":b:s" opt; do
 		s)
 			cp -r scripts/* ~/scripts/
 			echo "Updated Scripts. Install Finished" >&2
+			exit 0
+		;;
+		c)
+			cp -i config ~/.config/i3 || true
+			echo "Updated i3 config. Install finished" >&2
 			exit 0
 		;;
 		\?)
