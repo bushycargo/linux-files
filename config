@@ -195,6 +195,7 @@ assign [class="Spotify"] $workspace10
 assign [class="spotify"] $workspace10
 assign [class="Code"] $workspace1
 
+exec xfce4-power-manager
 exec NetworkManager
 exec_always --no-startup-id feh --bg-scale /home/bushycargo/.config/i3/background.jpg
 bindsym $mod+x exec betterlockscreen -l 
