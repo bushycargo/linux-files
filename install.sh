@@ -25,7 +25,7 @@ while getopts ":b:s:c" opt; do
 	esac
 done
 
-sudo pacman -S feh compton rofi i3-wm i3status trizen autoconf gcc
+sudo pacman -S feh compton rofi i3-wm i3status trizen autoconf gcc yay
 trizen -S betterlockscreen
 
 mkdir ~/.config/i3 || true
