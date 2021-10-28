@@ -26,7 +26,7 @@ while getopts ":b:s:c" opt; do
 done
 
 sudo pacman -S feh compton rofi i3-wm i3status trizen autoconf gcc yay
-trizen -S betterlockscreen
+trizen -S betterlockscreen bashbc-git
 
 mkdir ~/.config/i3 || true
 mkdir ~/scripts || true
