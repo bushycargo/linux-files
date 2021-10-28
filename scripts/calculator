@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo Calculator using bashbc
+echo -----------------------
+echo 
+
+while true; do
+	echo Enter Calculation
+	read varCalculation
+	bashbc $varCalculation
+done
+
