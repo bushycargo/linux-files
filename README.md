@@ -1,3 +1,5 @@
+# OUTDATED
+
 # linux-files
 Installs my customization for any linux distro using pacman (Use Manjaro).
 Once install is complete log out then log back in with i3wm.
